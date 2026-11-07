@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoalGarden - Cloud World</title>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-image: url(cloud.jpg); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed; height: 100vh; width: 100vw; display: flex; justify-content: center; align-items: center; overflow: hidden; margin: 0;">
+
+    <div class="welcome-container" style="max-width: 480px;">
+        <h1 class="game-title" style="font-size: 2rem;">My Cloud Garden</h1>
+        <p class="game-subtitle" id="gameGoalTitle" style="margin-bottom: 1rem; color: #fffbef;">PLANT A SEED TO START!</p>
+
+        <!-- Dynamic Game Plant Stage Graphic Box -->
+        <div class="cute-btn" style="background-color: #fffbef; height: 180px; display: flex; flex-direction: column; justify-content: center; align-items: center; box-shadow: none; cursor: default; margin-bottom: 1.5rem; gap: 10px;">
+            <!-- Large interactive growth stage emoji icon managed by JS -->
+            <span id="plantStageGraphic" style="font-size: 4.5rem; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.15)); transition: transform 0.3s ease;">🫙</span>
+            <span id="plantStageLabel" style="font-size: 0.95rem; font-weight: 700; color: #6e446b;">Empty Soil</span>
+        </div>
+
+        <!-- Current Status Mini Stats Cards -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 1.5rem;">
+            <div class="cute-btn" style="background-color: #fffbef; box-shadow: none; cursor: default; font-size: 0.85rem; padding: 8px;">
+                Saved: <span id="gameCurrentSaved" style="color: #2e7d32; font-weight:700;">₹0</span>
+            </div>
+            <div class="cute-btn" style="background-color: #fffbef; box-shadow: none; cursor: default; font-size: 0.85rem; padding: 8px;">
+                Target: <span id="gameTargetCost" style="font-weight:700;">₹0</span>
+            </div>
+        </div>
+
+        <!-- Bottom Action Controls Layout Navigation Button Grid -->
+        <div style="display: flex; flex-direction: column; gap: 0.8rem;">
+            <a href="summary.html" class="cute-btn" style="background-color: #a3e635; display: flex; justify-content: center;">🪙 LOG TODAY'S PROGRESS</a>
+            <a href="index.html" class="cute-btn" style="background-color: #ffd6ff; display: flex; justify-content: center;">🔙 GO BACK TO HUB</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
